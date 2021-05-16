@@ -32,7 +32,7 @@ function skip() {
 }
 
 function handleRangeUpdate() {
-    console.log(this.value);
+    video[this.name] = this.value;
 }
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updatePlayButton);
@@ -41,4 +41,4 @@ toggle.addEventListener('click', togglePlay);
 
 skipButtons.forEach(button => button.addEventListener('click', skip));
 
-ranges.forEach(range => range.addEventListener('click', handleRangeUpdate));
+ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
